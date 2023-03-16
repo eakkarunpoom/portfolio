@@ -1,0 +1,41 @@
+body {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.loading {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.loading::after {
+    content:  '';
+    display: block;
+    position: absolute;
+    background: white;
+    left: 30px;
+    bottom: 30px;
+    width: 2px;
+    height: 30px;
+    transform-origin: 0 100%;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
